@@ -66,6 +66,10 @@ Train RMSE,          Test RMSE,          R^2
                     
 Linear regression:		0.23467,  	    0.23478,  	 0.8690
 
+SVR:	0.22914,	0.22909,	0.87356
+
+Random Forest:		0.17802,	0.17803,	0.92479
+
 XGboost:		        0.15960,  	    0.17343,  	 0.928521
 
 1. Performance of Ridge and Lasso regularisation was almost identical to linear regression and optimal regularisation strengths selected through cross-validation are quite small. 
