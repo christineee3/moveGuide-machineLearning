@@ -52,13 +52,13 @@ Linear regression, Support Vector Regression (SVR),
 Random Forests,
 Xgboost
 
-Splitted the dataset into training and testing sets
+1. Splitted the dataset into training and testing sets
 
-Normalising the columns
+2. Normalising the columns
 
-Used Random Search cross validations function from sckit-learn to test parameter space for linear regression (including Ridge and Lasso), SVR, random forests
+3. Used Random Search cross validations function from sckit-learn to test parameter space for linear regression (including Ridge and Lasso), SVR, random forests
 
-Xgboost model was also trained using random search of set parameters, making use of learning rate, and parallelisation with GPUs.
+4. Xgboost model was also trained using random search of set parameters, making use of learning rate, and parallelisation with GPUs.
 
 Evaluation
 
@@ -74,7 +74,7 @@ Suggests the features in the dataset not having high multicollinearity, and all 
 2. Best model - Xgboost, The optimal parameter set was:
  •	max_depth = 19 •	n_estimators = 600•	min_child_weight = 14•	colsample_bytree = 1•	subsample = 0.6•	reg_alpha = 0.168•	reg_lambda = 0.219•	learning_rate = 0.046 
 
-  These settings resulted in deep ensemble of 600 trees with max depth of 19,more capable of capturing complex underlying patterns between features. The use of a learning rate improved generalisation, subsample of 60% training data used in each round introduced randomness, along with regularisation parameters prevented overfitting.
+  These settings resulted in deep ensemble of 600 trees with max depth of 19,more capable of capturing complex underlying patterns between features. The use of a learning rate improved       generalisation, subsample of 60% training data used in each round introduced randomness, along with regularisation parameters prevented overfitting.
 
 
 
