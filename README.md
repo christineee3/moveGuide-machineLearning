@@ -72,6 +72,8 @@ Xgboost
 
 4. Xgboost model was also trained using random search of set parameters, making use of learning rate, and parallelisation with GPUs.
 
+Majority of model training utilised Queen Mary's Apocrita HPC Cluster supported by QMUL Research-IT. http://doi.org/10.5281/zenodo.438045
+
 ---
 ## Evaluation
 
@@ -87,13 +89,13 @@ Xgboost
 	
 	XGboost:	 0.15960,  	  0.17343,  	 0.928521
 
-1. Performance of Ridge and Lasso regularisation was almost identical to linear regression and optimal regularisation strengths selected through cross-validation are quite small. 
-Suggests the features in the dataset not having high multicollinearity, and all features are relevant to the prediction, however this could also be a result of the models being too simple and lacking the complexity in capturing patterns and relationships between features. Small differences in Test and Training set RMSE indicates minimal overfitting.
+1. Performance of Ridge and Lasso regularisation was almost identical to linear regression and optimal regularisation strengths selected through cross-validation are small. 
+Suggests the features in the dataset having low multicollinearity, and all features are relevant to the prediction, however this could also indicate the models being too simple, lacking the complexity in capturing patterns between features. Small differences in Test and Training set RMSE indicates minimal overfitting.
 
 2. Best model - Xgboost, The optimal parameter set was:
  •	max_depth = 19 •	n_estimators = 600•	min_child_weight = 14•	colsample_bytree = 1•	subsample = 0.6•	reg_alpha = 0.168•	reg_lambda = 0.219•	learning_rate = 0.046 
 
-	These settings resulted in deep ensemble of 600 trees with max depth of 19,more capable of capturing complex underlying patterns between f		eatures. The use of a learning rate improved       generalisation, subsample of 60% training data used in each round introduced randomness, 	along with regularisation parameters prevented overfitting.
+	These settings resulted in deep ensemble of 600 trees with max depth of 19,more capable of capturing complex underlying patterns between features. The use of a learning rate improved       generalisation, subsample of 60% training data used in each round introduced randomness, 	along with regularisation parameters prevented overfitting.
 
 
 
